@@ -7,21 +7,17 @@ h1{
     color: #3a241d;
     text-align: center;
 }
-#left-container{
-	background-color: #eee;
+.container{
 	width: 15%;
-	left: 0%;
-	top: 0px;
-	position: absolute;
 	height: 100%;
+	position: absolute;
+	background-color: #eee;
+	top: 0px;
 	padding: 10px;
 }
+#left-container{
+	left: 0px;
+}
 #right-container{
-	background-color: #eee;
-	width: 15%;
-	left: 85%;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+	right: 0px;
 }
