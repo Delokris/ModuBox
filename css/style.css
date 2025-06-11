@@ -10,7 +10,7 @@ h1{
 #left-container{
 	background-color: #eee;
 	width: 15%;
-	left: 0px;
+	left: 0%;
 	top: 0px;
 	position: absolute;
 	height: 100%;
@@ -19,7 +19,7 @@ h1{
 #right-container{
 	background-color: #eee;
 	width: 15%;
-	left: 0px;
+	left: 85%;
 	top: 0px;
 	position: absolute;
 	height: 100%;
