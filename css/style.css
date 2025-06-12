@@ -11,7 +11,10 @@ h1{
 	position: absolute;
 	background-color: #eee;
 	top: 10%;
-	padding: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 #left-container{
 	width: 15%;
