@@ -27,7 +27,7 @@ h1{
 	position: absolute;
 	width: 70%;
 	background-color: #fff;
-	padding: 10px;
+	padding: 0px;
 }
 #header{
 	height: 10%;
@@ -35,7 +35,7 @@ h1{
 	position: absolute;
 	top: 0px;
 	text-align: center;
-	padding: 10px;
+	padding: 0px;
 	background-color: #3a241d;
 	color: white;
 }
