@@ -10,10 +10,10 @@ h1{
 .container{
 	width: 15%;
 	height: 90%;
-	position: relative;
+	position: absolute;
 	background-color: #eee;
 	top: 0px;
-	padding: 10px;
+	padding: 0px;
 }
 #left-container{
 	left: 0px;
@@ -35,7 +35,7 @@ h1{
 	position: absolute;
 	top: 0px;
 	text-align: center;
-	padding: 0px;
+	padding: 10px;
 	background-color: #3a241d;
 	color: white;
 }
