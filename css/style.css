@@ -12,7 +12,7 @@ h1{
 	height: 90%;
 	position: absolute;
 	background-color: #eee;
-	top: 10%;
+	top: auto;
 	padding: 10px;
 }
 #left-container{
