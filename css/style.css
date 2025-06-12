@@ -7,36 +7,25 @@ h1{
     color: #3a241d;
     text-align: center;
 }
-.container{
+#left-container{
 	position: absolute;
 	background-color: #eee;
-}
-#left-container{
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	left: 0px;
 	top: 10%;
 	width: 15%;
 	height: 90%;
 }
 #right-container{
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	position: absolute;
+	background-color: #eee;
 	right: 0px;
 	top: 10%;
 	width: 15%;
 	height: 90%;
 }
 #center-container{
+	position: absolute;
 	background-color: #fff;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	left: 15%;
 	right: 15%;
 	top: 10%;
@@ -47,28 +36,43 @@ h1{
 	position: absolute;
 	background-color: #3a241d;
 	color: white;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	top: 0px;
 	left: 0px;
 	text-align: center;
 	height: 10%;
-	width: 95;
+	width: 100%;
 }
-#footer{
-	
+#footer{	
 	position: absolute;
 	text-align: center;
 	background-color: #3a241d;
 	color: white;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	bottom: 0px;
 	left: 0px;
 	height: 10%;
-	width: 95%;
+	width: 100%;
+}
+nav{
+	position: absolute;
+	background-color: #3a241d;
+	color: white;
+	top: 5%;
+	left: 0px;
+	width: 100%;
+	height: 5%;
+	z-index: 1;
+	text-align: left;
+}
+#container-impressum{
+	position: absolute;
+	background-color: #fff;
+	left: 0%;
+	right: 15%;
+	top: 10%;
+	width: 100%;
+	height: 90%;
+}
+a{
+	color: white;
+	text-decoration: none;
 }
