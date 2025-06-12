@@ -1,0 +1,7 @@
+{
+    "manifest-version":3,
+    "name": "Die Kiste!",
+    "version": "1.0",
+    "author":"Die Kiste!",
+    "icon": "./boxes.png"
+}
