@@ -10,40 +10,40 @@ h1{
 .container{
 	position: absolute;
 	background-color: #eee;
-	top: 10%;
 }
 #left-container{
-	width: 15%;
-	height: 90%;
 	left: 0px;
+	top: 10%;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	width: 15%;
+	height: 90%;
 }
 #right-container{
-	width: 15%;
-	height: 90%;
 	right: 0px;
+	top: 10%;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	width: 15%;
+	height: 90%;
 }
 #center-container{
-	width: 60%;
-	height: 90%;
 	left: 17%;
-	right: 20%;
+	right: 17%;
+	top: 10%;
 	background-color: #fff;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	width: 60%;
+	height: 90%;
 }
 #header{
-	height: 10%;
-	width: 95%;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -54,4 +54,6 @@ h1{
 	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	height: 10%;
+	width: 95%;
 }
