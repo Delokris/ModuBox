@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Die Kiste!</title>
+    <title>FlexBox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/png" href="./images/boxes.png" />
@@ -25,7 +25,25 @@
         </div>
         <div id="center-container" class="container">
             <div class="place-holder">
-                <img class="box" alt="box3" id=box3 src="./images/box3.png" />
+
+                <div id="carousel-container">
+                    import Carousel from "../js/carousel.js"
+                    <style>
+                        #carousel-container {
+                            height: 600px;
+                            position: relative;
+                        }
+                    </style>                            
+                    <Carousel
+                        baseWidth={300}
+                        autoplay={true}
+                        autoplayDelay={3000}
+                        pauseOnHover={true}
+                        loop={true}
+                        round={false}
+                    />
+                </div>
+                <!-- <img class="box" alt="box3" id=box3 src="./images/box3.png" /> -->
             </div>
             <p> lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
