@@ -10,12 +10,12 @@ h1{
 #left-container{
 	position: absolute;
 	background-color: #eee;
-	left: 0%;
+	left: -100%;
 	top: 10%;
 	width: 15%;
 	height: 80%;
 	opacity: 0;
-	transform:translateX(-100%);
+	transform:translateX(-0%);
 	transition: opacity 0.5s, transform 0.5s;
 	z-index: 3;
 }
@@ -31,7 +31,7 @@ h1{
 }
 .hover-container:hover + .fade-container{
 	opacity: 1;
-	transform:translateX(0%);
+	transform:translateX(100%);
 }
 #right-container{
 	position: absolute;
