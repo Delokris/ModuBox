@@ -9,13 +9,12 @@ h1{
 #left-container{
 	position: absolute;
 	background-color: #eee;
-	left: -100%;
+	left: 0%;
 	top: 10%;
 	width: 15%;
 	height: 80%;
 	opacity: 0;
-	transform: translateX(0%);
-	transition: opacity 0.5s, transform 0.5s;
+	transform: translateX(-100%);
 	z-index: 3;
 	padding: 16px;
 }
@@ -33,20 +32,8 @@ h1{
 	padding: 16px;
 	overflow: hidden;
 }
-#left-wrapper {
-	position: relative;
-	background-color: transparent;
-	width: 20%;
-	height: 80%;
-	left: 0px;
-	top: 10%;
-	width: 15%;
-	height: 80%;
-	box-sizing: border-box;
-	margin-top: 0;
-}
-
-#left-wrapper:hover ~ #left-container {
+#left-hotbar:hover ~ #left-container{
+	transition: opacity 0.5s, transform 0.5s;
 	opacity: 1;
 	transform: translateX(100%);
 }
