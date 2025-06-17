@@ -50,6 +50,7 @@ h1{
 	top: 10%;
 	width: 80%;
 	height: 80%;
+	z-index: 1;
 }
 #header{
 	position: fixed;
