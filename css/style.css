@@ -30,9 +30,9 @@ h1{
 	overflow: auto;
 	word-wrap: break-word;
 }
-.hover-container:hover + .fade-container{
+#left-hotbar:hover + #left-container {
 	opacity: 1;
-	transform:translateX(100%);
+	transform: translateX(100%);
 }
 #right-container{
 	position: absolute;
