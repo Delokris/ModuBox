@@ -13,7 +13,7 @@ h1{
 	left: 0px;
 	top: 10%;
 	width: 15%;
-	height: 90%;
+	height: 80%;
 }
 #right-container{
 	position: absolute;
@@ -21,7 +21,7 @@ h1{
 	right: 0px;
 	top: 10%;
 	width: 15%;
-	height: 90%;
+	height: 80%;
 	
 }
 #center-container{
@@ -31,7 +31,7 @@ h1{
 	right: 15%;
 	top: 10%;
 	width: 70%;
-	height: 90%;
+	height: 80%;
 }
 #header{
 	position: fixed;
@@ -72,7 +72,16 @@ nav{
 	right: 15%;
 	top: 10%;
 	width: 100%;
-	height: 90%;
+	height: 80%;
+}
+#container-privacy{
+	position: absolute;
+	background-color: #fff;
+	left: 0%;
+	right: 15%;
+	top: 10%;
+	width: 100%;
+	height: 80%;
 }
 a{
 	color: white;
