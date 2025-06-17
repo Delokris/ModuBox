@@ -35,7 +35,7 @@ h1{
 #left-hotbar:hover ~ #left-container{
 	transition: opacity 0.5s, transform 0.5s;
 	opacity: 1;
-	transform: translateX(80%);
+	transform: translateX(0%);
 }
 #right-container{
 	position: absolute;
