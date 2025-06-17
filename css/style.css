@@ -28,9 +28,11 @@ h1{
 	height: 80%;
 	z-index:2;
 	overflow: auto;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
+	box-sizing: border-box;
+	margin-top: 0;
 }
-#left-hotbar:hover + #left-container {
+#left-hotbar:hover ~ #left-container {
 	opacity: 1;
 	transform: translateX(100%);
 }
