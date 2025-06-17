@@ -14,9 +14,20 @@
             <div id="header" class="container">
                 <h2><a href="./index.html">Die praktische Kiste</a></h2>
             </div>
-            <div id="container-impressum" class="container">
-                <h3>Impressum</h3>
-                <p>Dienstanbieter:<br> Julian Linden <br> Mustermanstraße 123 <br> 50667 Köln</p>  
+            <div id="container-contact" class="container">
+                <form>
+                    <h3>Kontakt</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                    
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required />
+                    
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Absenden</button>
+                    <p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p>                </form>
             </div>
             <div id="footer" class="container">
                 <p>© 2025 UnityUnits - Alle Rechte vorbehalten.</p> 
