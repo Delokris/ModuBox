@@ -10,7 +10,7 @@ h1{
 #left-container{
 	position: absolute;
 	background-color: #eee;
-	left: -100%;
+	left: 0%;
 	top: 10%;
 	width: 15%;
 	height: 80%;
