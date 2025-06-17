@@ -24,7 +24,7 @@ h1{
 	background-color: #eee;
 	left: 0px;
 	top: 10%;
-	width: 05%;
+	width: 15%;
 	height: 80%;
 	z-index:2;
 }
@@ -95,10 +95,18 @@ nav{
 	position: absolute;
 	background-color: #fff;
 	left: 0%;
-	right: 15%;
 	top: 10%;
 	width: 100%;
 	height: auto;
+}
+
+#container-contact{
+	position: absolute;
+	background-color: #fff;
+	left: 0%;
+	top: 10%;
+	width: 100%;
+	height: 80%;
 }
 a{
 	color: white;
