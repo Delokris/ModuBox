@@ -31,6 +31,7 @@ h1{
 	box-sizing: border-box;
 	margin-top: 0;
 	padding: 16px;
+	overflow: hidden;
 }
 #left-wrapper:hover #left-container {
 	opacity: 1;
