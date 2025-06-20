@@ -20,8 +20,7 @@ h1{
 	overflow: hidden;
  	display: flex;
 	min-width: 250px;
-    align-items: center;
-    justify-content: center
+	vertical-align: middle;
 }
 
 #left-hotbar{
