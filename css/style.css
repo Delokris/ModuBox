@@ -167,7 +167,7 @@ img {
   max-height: inherit;
   height: inherit;
   width: inherit;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 #sidebar-img img{
 	object-fit: scale-down;
