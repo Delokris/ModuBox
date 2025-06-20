@@ -168,8 +168,8 @@ a{
 	font-size: small;
 }
 img {
-	max-width: 100px;
-	max-height: 100px;
+	max-width: 50px;
+	max-height: 50px;
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
@@ -177,8 +177,8 @@ img {
 }
 
 #sidebar-img img {
-	max-width: 100px;
-	max-height: 100px;
+	max-width: 50px;
+	max-height: 50px;
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
