@@ -21,6 +21,7 @@ h1{
  	display: flex;
 	min-width: 250px;
 	vertical-align: middle;
+	align-content: center;
 }
 
 #left-hotbar{
