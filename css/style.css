@@ -18,10 +18,7 @@ h1{
 	z-index: 3;
 	padding: 16px;
 	overflow: hidden;
- 	display: flex;
 	min-width: 250px;
-	display:flex;
-	align-items: center;;
 }
 
 #left-hotbar{
@@ -185,5 +182,6 @@ img {
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
-	display: block;
+	display: flex;
+	vertical-align: middle;
 }
