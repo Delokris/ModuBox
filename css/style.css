@@ -18,7 +18,7 @@ h1{
 	z-index: 3;
 	padding: 16px;
 	overflow: hidden;
-	min-width: 250px;
+	min-width: 150px;
 }
 
 #left-hotbar{
@@ -34,7 +34,7 @@ h1{
 	margin-top: 0;
 	padding: 16px;
 	overflow: hidden;
-	min-width: 100px;
+	min-width: 82px;
 }
 #left-hotbar:hover ~ #left-container{
 	transition: opacity 0.5s, transform 0.5s;
@@ -173,7 +173,6 @@ img {
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
-	display: block;
 }
 
 #sidebar-img img {
@@ -182,6 +181,5 @@ img {
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
-	display: flex;
 	vertical-align: middle;
 }
