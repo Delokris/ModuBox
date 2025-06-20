@@ -17,6 +17,8 @@ h1{
 	transform: translateX(-100%);
 	z-index: 3;
 	padding: 16px;
+	overflow: hidden;
+ 	display: flex;
 }
 
 #left-hotbar{
@@ -166,4 +168,7 @@ img {
   height: inherit;
   width: inherit;
   object-fit: cover;
+}
+#sidebar-img img{
+	object-fit: scale-down;
 }
