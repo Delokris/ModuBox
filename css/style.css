@@ -11,14 +11,14 @@ h1{
 	background-color: #eee;
 	left: 0%;
 	top: 10%;
-	width: 15%;
+	width: max-conent;
 	height: 80%;
 	opacity: 0;
 	transform: translateX(-100%);
+	margin-top: 0;
 	z-index: 3;
 	padding: 16px;
 	overflow: hidden;
-	min-width: 150px;
 }
 
 #left-hotbar{
@@ -29,8 +29,6 @@ h1{
 	width: 5%;
 	height: 80%;
 	z-index:2;
-	overflow-wrap: break-word;
-	box-sizing: border-box;
 	margin-top: 0;
 	padding: 16px;
 	overflow: hidden;
@@ -167,14 +165,6 @@ a{
 #left-container p{
 	font-size: small;
 }
-img {
-	max-width: 50px;
-	max-height: 50px;
-	width: auto;
-	height: auto;
-	object-fit: scale-down;
-}
-
 #left-container img {
 	max-width: 50px;
 	max-height: 50px;
