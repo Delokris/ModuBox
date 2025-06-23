@@ -175,7 +175,7 @@ img {
 	object-fit: scale-down;
 }
 
-#sidebar-img img {
+#left-container img {
 	max-width: 50px;
 	max-height: 50px;
 	width: auto;
