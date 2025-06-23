@@ -10,9 +10,9 @@ h1{
 	position: absolute;
 	background-color: #eee;
 	left: 0%;
-	top: 10%;
+	top: auto;
 	width: 15%;
-	height: auto;
+	height: 80%;
 	opacity: 0;
 	transform: translateX(-100%);
 	z-index: 3;
@@ -25,9 +25,9 @@ h1{
 	position: absolute;
 	background-color: #eee;
 	left: 0px;
-	top: 10%;
+	top: auto;
 	width: 5%;
-	height: auto;
+	height: 80%;
 	z-index:2;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
@@ -49,9 +49,9 @@ h1{
 	position: absolute;
 	background-color: #eee;
 	right: 0px;
-	top: 10%;
+	top: auto;
 	width: 15%;
-	height: auto;
+	height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;	
