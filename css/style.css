@@ -12,7 +12,7 @@ h1{
 	left: 0%;
 	top: 10%;
 	width: 15%;
-	height: 80%;
+	height: auto;
 	opacity: 0;
 	transform: translateX(-100%);
 	z-index: 3;
@@ -27,7 +27,7 @@ h1{
 	left: 0px;
 	top: 10%;
 	width: 5%;
-	height: 80%;
+	height: auto;
 	z-index:2;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
@@ -51,7 +51,7 @@ h1{
 	right: 0px;
 	top: 10%;
 	width: 15%;
-	height: 80%;
+	height: auto;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;	
