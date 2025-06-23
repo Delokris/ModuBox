@@ -16,5 +16,4 @@ function adjustHeight() {
     document.getElementById('right-container').style.height = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
 }
 
-
 adjustHeight();

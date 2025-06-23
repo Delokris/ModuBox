@@ -8,10 +8,11 @@
     <link rel="icon" type="image/png" href="./images/UnityUnits-Logo-512x512.png" />
     <link rel="apple-touch-icon" href="./images/boxes.png" />
     <link rel="webmanifest" href="./manifest.json" />
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <div id="page">
-            <div id="left-hotbar" class="flexbox">
+    <div id="page" onresize="adjustHeight()">
+            <div id="left-hotbar" class="flexbox" on>
                 <img alt="home" src="./images/home.png" /> <br> <br>
                 <img alt="shop" src="./images/shop.png" /> <br> <br>
                 <img alt="about" src="./images/about.png" /> <br> <br>
