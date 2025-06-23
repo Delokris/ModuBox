@@ -11,11 +11,10 @@ h1{
 	background-color: #eee;
 	left: 0%;
 	top: 10%;
-	width: max-conent;
+	width: max-content;
 	height: 80%;
 	opacity: 0;
 	transform: translateX(-100%);
-	margin-top: 0;
 	z-index: 3;
 	padding: 16px;
 	overflow: hidden;
@@ -168,6 +167,14 @@ a{
 	font-size: small;
 }
 #left-container img {
+	max-width: 50px;
+	max-height: 50px;
+	width: auto;
+	height: auto;
+	object-fit: scale-down;
+	vertical-align: middle;
+}
+#left-hotbar img{
 	max-width: 50px;
 	max-height: 50px;
 	width: auto;
