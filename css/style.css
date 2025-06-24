@@ -136,6 +136,7 @@ nav{
 	background-color: #fff;
 	left: 82px;
 	top: 10%;
+	bottom: 10%;
 	width: calc(100% - 82px);
 	height: max-content;
 	min-height: 80%;
