@@ -14,9 +14,10 @@ h1{
 	position: absolute;
 	background-color: #ba8c63;
 	left: 0%;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
+	height: max-content;
 	width: max-content;
-	height: 80%;
 	opacity: 0;
 	z-index: 3;
 	padding: 16px;
@@ -27,9 +28,10 @@ h1{
 	position: absolute;
 	background-color: #ba8c63;
 	left: 0px;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
+	height: max-content;
 	width: 82px;
-	height: 80%;
 	z-index:2;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
@@ -49,9 +51,10 @@ h1{
 	position: absolute;
 	background-color: #eee;
 	right: 0px;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
+	height: max-content;
 	width: 15%;
-	height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;	
@@ -63,9 +66,10 @@ h1{
 	background-color: #e6cfbf;
 	left: 82px;
 	right: 15%;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
+	height: max-content;
 	width: 80%;
-	height: 80%;
 	z-index: 1;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
@@ -79,13 +83,12 @@ h1{
 	top: 0px;
 	left: 0px;
 	text-align: center;
-	height: 10%;
+	height: 108px;
 	width: 100%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
 	z-index:501;
-	min-height: 100px;
 }
 #footer{	
 	position: fixed;
@@ -94,13 +97,12 @@ h1{
 	color: white;
 	bottom: 0px;
 	left: 0px;
-	height: 10%;
+	height: 108px;
 	width: 100%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
 	z-index: 500;
-	min-height: 100px;
 }
 nav{
 	position: absolute;
@@ -123,10 +125,10 @@ nav{
 	background-color: #e6cfbf;
 	left: 82px;
 	right: 15%;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	height: max-content;
-	min-height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
@@ -136,10 +138,10 @@ nav{
 	position: absolute;
 	background-color: #e6cfbf;
 	left: 82px;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	height: max-content;
-	min-height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
@@ -151,10 +153,10 @@ nav{
 	position: absolute;
 	background-color: #e6cfbf;
 	left: 82px;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	height: max-content;
-	min-height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
@@ -164,10 +166,10 @@ nav{
 	position: absolute;
 	background-color: #e6cfbf;
 	left: 82px;
-	top: 10%;
+	top: 108px;
+	min-height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	height: max-content;
-	min-height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
