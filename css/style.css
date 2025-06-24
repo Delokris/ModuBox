@@ -40,13 +40,15 @@ h1{
 	min-width: 82px;
 }
 #left-hotbar:hover ~ #left-container{
-	transition: opacity 0.5s, transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s, z-index 0.5s;
 	opacity: 1;
 	transform: translateX(0%);
+	z-index: 4;
 }
 #left-container:hover{
 	opacity: 1;
 	transform: translateX(0%);
+	z-index: 4;
 }
 #right-container{
 	position: absolute;
@@ -195,10 +197,6 @@ a{
 	height: auto;
 	object-fit: scale-down;
 	vertical-align: middle;
-}
-#left-container span{
-	position: absolute;
-	z-index: 5;
 }
 #left-hotbar img{
 	max-width: 50px;
