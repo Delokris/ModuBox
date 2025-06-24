@@ -197,7 +197,8 @@ a{
 	vertical-align: middle;
 }
 #left-container span{
-	z-index:5;
+	position: absolute;
+	z-index: 5;
 }
 #left-hotbar img{
 	max-width: 50px;
