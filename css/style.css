@@ -139,11 +139,12 @@ nav{
 	top: 10%;
 	bottom: 10%;
 	width: calc(100% - 82px);
-	height: calc(max-content + 10%);
+	height: max-content;
 	min-height: 80%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
+	margin-bottom: 10%;
 	padding: 16px;
 }
 
