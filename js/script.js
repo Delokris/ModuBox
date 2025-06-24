@@ -10,3 +10,7 @@ function addToShoppingList(itemID) {
     console.log("Item added to shopping list: " + item);
     console.log("Current shopping list: " + shoppingList.join(", "));
 }
+function adjustSizeImprint(){
+    document.getElementById("left-hotbar").style.height = document.getElementById("container-imprint").getAttribute("height");
+    document.getElementById("left-container").style.height = document.getElementById("container-imprint").getAttribute("height");
+}
