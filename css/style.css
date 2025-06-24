@@ -12,6 +12,7 @@ h1{
 }
 #left-container{
 	position: absolute;
+	box-sizing: border-box;
 	background-color: #ba8c63;
 	left: 0%;
 	top: 108px;
