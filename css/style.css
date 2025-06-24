@@ -7,6 +7,9 @@ h1{
     color: #3a241d;
     text-align: center;
 }
+#page{
+	background-color: #ba8c63
+}
 #left-container{
 	position: absolute;
 	background-color: #ba8c63;
