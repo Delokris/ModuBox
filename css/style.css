@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 body{
     background-color: lightgray;
-	font-family: 'OpenDyslexic', 'opendyslexic', Times, serif;
+	font-family: 'OpenDyslexic', 'opendyslexic', Lexend, Times, serif;
 }
 h1{
     color: #3a241d;
