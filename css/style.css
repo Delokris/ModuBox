@@ -196,6 +196,9 @@ a{
 	object-fit: scale-down;
 	vertical-align: middle;
 }
+#left-container span{
+	z-index:5;
+}
 #left-hotbar img{
 	max-width: 50px;
 	max-height: 50px;
