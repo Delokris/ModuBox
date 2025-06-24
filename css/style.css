@@ -19,7 +19,7 @@ h1{
 	height: max-content;
 	width: max-content;
 	opacity: 0;
-	z-index: 3;
+	z-index: 1;
 	padding: 16px;
 	padding-bottom: 124px;
 	overflow: hidden;
@@ -45,9 +45,11 @@ h1{
 #left-hotbar:hover ~ #left-container{
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
+	z-index: 4;
 }
 #left-container:hover{
 	opacity: 1;
+	z-index: 4;
 }
 #right-container{
 	position: absolute;
