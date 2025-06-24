@@ -18,8 +18,7 @@ h1{
 	width: max-content;
 	height: 80%;
 	opacity: 0;
-	transform: translateX(-100%);
-	z-index: 2;
+	z-index: 3;
 	padding: 16px;
 	overflow: hidden;
 }
@@ -31,7 +30,7 @@ h1{
 	top: 10%;
 	width: 82px;
 	height: 80%;
-	z-index:3;
+	z-index:2;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
@@ -40,15 +39,11 @@ h1{
 	min-width: 82px;
 }
 #left-hotbar:hover ~ #left-container{
-	transition: opacity 0.5s, transform 0.5s, z-index 0.5s;
+	transition: opacity 0.5s ease-in;
 	opacity: 1;
-	transform: translateX(0%);
-	z-index: 4;
 }
 #left-container:hover{
 	opacity: 1;
-	transform: translateX(0%);
-	z-index: 4;
 }
 #right-container{
 	position: absolute;
