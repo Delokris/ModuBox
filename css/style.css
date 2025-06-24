@@ -1,6 +1,6 @@
 body{
     background-color: lightgray;
-    font-family: helvetica, arial, sans-serif;
+    font-family: OpenDyslexic, Times, serif;
 }
 h1{
     color: #3a241d;
@@ -8,7 +8,7 @@ h1{
 }
 #left-container{
 	position: absolute;
-	background-color: #eee;
+	background-color: #ba8c63;
 	left: 0%;
 	top: 10%;
 	width: max-content;
@@ -22,7 +22,7 @@ h1{
 
 #left-hotbar{
 	position: absolute;
-	background-color: #eee;
+	background-color: #ba8c63;
 	left: 0px;
 	top: 10%;
 	width: 82px;
@@ -59,7 +59,7 @@ h1{
 }
 #center-container{
 	position: absolute;
-	background-color: #fff;
+	background-color: #e6cfbf;
 	left: 82px;
 	right: 15%;
 	top: 10%;
@@ -73,7 +73,7 @@ h1{
 }
 #header{
 	position: fixed;
-	background-color: #3a241d;
+	background-color: #905e3e;
 	color: white;
 	top: 0px;
 	left: 0px;
@@ -89,7 +89,7 @@ h1{
 #footer{	
 	position: fixed;
 	text-align: center;
-	background-color: #3a241d;
+	background-color: #905e3e;
 	color: white;
 	bottom: 0px;
 	left: 0px;
@@ -119,7 +119,7 @@ nav{
 }
 #container-impressum{
 	position: absolute;
-	background-color: #fff;
+	background-color: #e6cfbf;
 	left: 82px;
 	right: 15%;
 	top: 10%;
@@ -133,7 +133,7 @@ nav{
 }
 #container-privacy{
 	position: absolute;
-	background-color: #fff;
+	background-color: #e6cfbf;
 	left: 82px;
 	top: 10%;
 	bottom: 10%;
@@ -148,7 +148,7 @@ nav{
 
 #container-contact{
 	position: absolute;
-	background-color: #fff;
+	background-color: #e6cfbf;
 	left: 82px;
 	top: 10%;
 	width: calc(100% - 82px);
