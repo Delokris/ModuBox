@@ -21,6 +21,7 @@ function adjustSize() {
     document.getElementById('container-impressum').style.top = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
     document.getElementById('container-contact').style.top = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
     document.getElementById('container-privacy').style.top = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
+    document.getElementById('container-privacy').style.heigt += document.defaultView.getComputedStyle(document.getElementById('footer'), "").getPropertyValue("height");
     document.getElementById('left-hotbar').style.height = document.defaultView.getComputedStyle(document.getElementById('container-privacy'), "").getPropertyValue("height");
     document.getElementById('container-about').style.top = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
     document.getElementById('container-shop').style.top = document.defaultView.getComputedStyle(document.getElementById('header'), "").getPropertyValue("height");
