@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 body{
-    background-color: lightgray;
+    background-color: #ba8c63;
 	font-family: 'OpenDyslexic', 'opendyslexic', Lexend, Times, serif;
 }
 h1{
@@ -8,7 +8,7 @@ h1{
     text-align: center;
 }
 #page{
-	background-color: #ba8c63
+	background-color: #ba8c63;
 }
 #left-container{
 	position: absolute;
@@ -140,7 +140,6 @@ nav{
 	background-color: #e6cfbf;
 	left: 82px;
 	top: 10%;
-	bottom: 10%;
 	width: calc(100% - 82px);
 	height: max-content;
 	min-height: 80%;
@@ -148,7 +147,7 @@ nav{
 	box-sizing: border-box;
 	margin-top: 0;
 	padding: 16px;
-	padding-bottom: 10%;
+	padding-bottom: calc(10% + 16px);
 }
 
 #container-contact{
@@ -163,6 +162,20 @@ nav{
 	box-sizing: border-box;
 	margin-top: 0;
 	padding: 16px;
+}
+#container-about{
+	position: absolute;
+	background-color: #e6cfbf;
+	left: 82px;
+	top: 10%;
+	width: calc(100% - 82px);
+	height: max-content;
+	min-height: 80%;
+	overflow-wrap: break-word;
+	box-sizing: border-box;
+	margin-top: 0;
+	padding: 16px;
+	padding-bottom: calc(10% + 16px);
 }
 a{
 	color: white;
