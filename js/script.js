@@ -8,7 +8,7 @@ buttonCount();
 let shoppingList = [];
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
-    console.log("Item added to shopping list: " + item);
+    console.log("Item added to shopping list: " + itemID);
     console.log("Current shopping list: " + shoppingList.join(", "));
 }
 function adjustSizeImprint(){
