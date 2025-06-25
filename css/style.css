@@ -202,7 +202,7 @@ nav{
 }
 .product-item{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #3a241d;
