@@ -1,10 +1,4 @@
 let boxSize = [,];
-let count = 0;
-function buttonCount(){
-    count = count+1
-    console.log("Button clicked " + count + " times");
-}
-buttonCount();
 let shoppingList = [];
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
