@@ -15,16 +15,19 @@ document.getElementById("buttonBoardgame").onclick = function() {
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Boardgame");
+    window.location.href='configurator.html'
 }
 document.getElementById("buttonSmall").onclick = function() {
     boxSize[shoppingList.length,0] = 300;
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Small");
+    window.location.href='configurator.html'
 }
 document.getElementById("buttonIndividual").onclick = function() {
     boxSize[shoppingList.length,0] = 300;
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Individual");
+    window.location.href='configurator.html'
 }
