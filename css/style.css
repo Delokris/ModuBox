@@ -273,6 +273,6 @@ a{
 	height: auto;
 	object-fit: scale-down;
 	vertical-align: middle;
-	margin-right: 10px;
+	padding-left: calc(100% - 66px);
 	align-self: right;
 }
