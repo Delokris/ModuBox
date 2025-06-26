@@ -15,6 +15,7 @@ document.getElementById("buttonBoardgame").onclick = function() {
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Boardgame");
+    document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonSmall").onclick = function() {
@@ -22,6 +23,7 @@ document.getElementById("buttonSmall").onclick = function() {
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Small");
+    document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonIndividual").onclick = function() {
@@ -29,13 +31,10 @@ document.getElementById("buttonIndividual").onclick = function() {
     boxSize[shoppingList.length,1] = 300;
     boxSize[shoppingList.length,2] = 80; 
     addToShoppingList("Individual");
+    document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("configuratorCancel").onclick = function() {
+    document.getElementById("configurator").style["z-index"] = "0";
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
-}
-
-while(document.getElementById("configuratorOverlay").getAttribute("z-index") == "1000") {
-    // Wait until the height attribute is set
-    document.getElementById("configurator").style["z-index"] = "999";
 }
