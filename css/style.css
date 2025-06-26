@@ -209,9 +209,9 @@ nav{
 	border-bottom: 1px solid #3a241d;
 	padding: 16px;
 }
-#configuratorOverlay{
+#configurator{
 	position: absolute;
-	background-color: #0000007a;
+	background-color: #000000;
 	left: 0%;
 	top: 0%;
 	min-height: 100%;
@@ -222,6 +222,7 @@ nav{
 	margin-top: 0;
 	padding: 16px;
 	z-index:1;
+	opacity:0.8;
 }
 #configuratorOverlay{
 	position: absolute;

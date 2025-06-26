@@ -34,3 +34,8 @@ document.getElementById("buttonIndividual").onclick = function() {
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
 }
+
+while(document.getElementById("configuratorOverlay").getAttribute("z-index") == "1000") {
+    // Wait until the height attribute is set
+    document.getElementById("configurator").style["z-index"] = "999";
+}
