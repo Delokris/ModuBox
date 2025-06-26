@@ -211,17 +211,30 @@ nav{
 }
 #configuratorOverlay{
 	position: absolute;
-	background-color: #F0F0F0;
-	left: 82px;
-	top: 108px;
-	min-height: calc(100% - 216px);
-	width: calc(100% - 82px);
+	background-color: #0000007a;
+	left: 0%;
+	top: 0%;
+	min-height: 100%;
+	width: 100%;
 	height: max-content;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
 	margin-top: 0;
 	padding: 16px;
-	padding-bottom: 124px;
+	z-index:1;
+}
+#configuratorOverlay{
+	position: absolute;
+	background-color: #F0F0F0;
+	left: 1%;
+	top: 1%;
+	min-height: 98%;
+	width: 98%;
+	height: max-content;
+	overflow-wrap: break-word;
+	box-sizing: border-box;
+	margin-top: 0;
+	padding: 16px;
 	z-index:1;
 }
 a{
