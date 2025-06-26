@@ -55,9 +55,16 @@
             </div>
             <div id="configuratorOverlay" class="overlay">
                 <div id="configuratorContent">
-                    <button id="configuratorCancel" class="close">&times;</button>
-                    <h2>Konfigurator</h2>                        <p>Hier kannst du deine Produkte konfigurieren.</p>
-                    <form id="configForm">
+                    <div id="productPreview">
+                        <h3>Produktvorschau</h3>
+                        <img id="productImage" src="./images/product1.png" alt="Produktvorschau" />
+                        <p id="productDescription">Beschreibung des Produkts.</p>
+                    </div>
+                    <div id="productConfig">
+                        <button id="configuratorCancel" class="close">&times;</button>
+                        <h3>Konfiguration</h3>
+                        <p id="productTypeDescription">Wähle den Produkttyp und die Maße aus, um deine Kiste zu konfigurieren.</p>
+                        <form id="configForm">
                         <label for="productType">Produkttyp:</label>
                         <select id="productType" name="productType">
                             <option value="small">Kleine Kiste</option>
@@ -65,11 +72,19 @@
                             <option value="individual">Individuelle Maße</option>
                         </select>  
                         <br><br>
-                        <label for="dimensions">Maße (L x B x H in cm):</label>
-                        <input type="text" id="dimensions" name="dimensions" placeholder="z.B. 30 x 30 x 8">
+                        <label for="boxlength" id="labelBoxLength">Länge in cm:</label>
+                        <input type="range" id="boxLength" name="length" min="15" max="50" value="30"">
                         <br><br>
-                        <button type="submit">Fertigstellen</button>
+                        <label for="boxWidth" id="lableBoxWidth">Breite in cm:</label>
+                        <input type="range" id="boxWidth" name="length" min="15" max="50" value="30"">
+                        <br><br>
+                        <label for="boxHeight" id="labelBoxHeight">Höhe in cm:</label>
+                        <input type="range" id="boxHeight" name="length" min="5" max="25" value="15"">
+                        <br><br>
+                        <button id="finishedBox" type="submit">Fertigstellen</button>
                     </form>
+                    </div>
+                    
                 </div>
             </div>
             <div id="footer" class="container">

@@ -1,4 +1,4 @@
-let boxSize = [,];
+let boxSize = [];
 let shoppingList = [];
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
@@ -11,30 +11,36 @@ function adjustSizeImprint(){
 }
 
 document.getElementById("buttonBoardgame").onclick = function() {
-    boxSize[shoppingList.length,0] = 300;
-    boxSize[shoppingList.length,1] = 300;
-    boxSize[shoppingList.length,2] = 80; 
-    addToShoppingList("Boardgame");
+    document.getElementById("boxLength").value = 30;
+    document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonSmall").onclick = function() {
-    boxSize[shoppingList.length,0] = 300;
-    boxSize[shoppingList.length,1] = 300;
-    boxSize[shoppingList.length,2] = 80; 
-    addToShoppingList("Small");
+    document.getElementById("boxLength").value = 15;
+    document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonIndividual").onclick = function() {
-    boxSize[shoppingList.length,0] = 300;
-    boxSize[shoppingList.length,1] = 300;
-    boxSize[shoppingList.length,2] = 80; 
-    addToShoppingList("Individual");
+    document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configurator").style["z-index"] = "0";
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
+}
+document.getElementById("finishedBox").onclick = function() {
+    boxSize.push([
+        document.getElementById("boxLength").value,
+        document.getElementById("boxWidth").value,
+        document.getElementById("boxHeight").value
+    ]);
+    addToShoppingList("Individual");
+    document.getElementById("configurator").style["z-index"] = "0";
+    document.getElementById("configuratorOverlay").style["z-index"] = "0";
+}
+document.getElementById("boxLength").oninput = function() {
+    document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
 }
