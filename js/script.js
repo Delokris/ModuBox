@@ -31,3 +31,6 @@ document.getElementById("buttonIndividual").onclick = function() {
     addToShoppingList("Individual");
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
+document.getElementById("configuratorCancel").onclick = function() {
+    document.getElementById("configuratorOverlay").style["z-index"] = "0";
+}
