@@ -49,6 +49,25 @@
                         <button id="buttonIndividual" class="config-button">Jetzt konfigurieren</button>
                     </div>
                 </div>
+                <div id="configuratorOverlay" class="overlay">
+                    <div id="configuratorContent">
+                        <span class="close" onclick="closeConfigurator()">&times;</span>
+                        <h2>Konfigurator</h2>
+                        <p>Hier kannst du deine Produkte konfigurieren.</p>
+                        <form id="configForm">
+                            <label for="productType">Produkttyp:</label>
+                            <select id="productType" name="productType">
+                                <option value="small">Kleine Kiste</option>
+                                <option value="boardgame">Brettspiel-Organizer</option>
+                                <option value="individual">Individuelle Maße</option>
+                            </select>
+                            <br><br>
+                            <label for="dimensions">Maße (L x B x H in cm):</label>
+                            <input type="text" id="dimensions" name="dimensions" placeholder="z.B. 30 x 30 x 8">
+                            <br><br>
+                            <button type="submit">Fertigstellen</button>
+                        </form>
+                    </div>
             </div>
             <div id="footer" class="container">
                 <p>© 2025 UnityUnits - Alle Rechte vorbehalten.</p> 
