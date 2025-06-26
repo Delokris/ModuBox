@@ -237,6 +237,7 @@ nav{
 	margin-top: 0;
 	padding: 16px;
 	z-index:1;
+	opacity: 1;
 }
 a{
 	color: white;
