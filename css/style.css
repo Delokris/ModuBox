@@ -266,13 +266,26 @@ a{
 	object-fit: scale-down;
 	vertical-align: middle;
 }
-#header img{
+#header img {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
 	max-width: 50px;
 	max-height: 50px;
 	width: auto;
 	height: auto;
 	object-fit: scale-down;
 	vertical-align: middle;
-	padding-left: calc(100% - 66px);
-	align-self: right;
+}
+#configuratorContent button{
+	background-color: #3a241d;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 10px;
+	display: block;
+	margin-left: auto;
 }
