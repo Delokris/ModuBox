@@ -12,7 +12,11 @@ function adjustSizeImprint(){
 
 document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("boxLength").value = 30;
+    document.getElementById("boxWidth").value = 30;
+    document.getElementById("boxHeight").value = 8;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
+    document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("labelBoxWidth").value + " cm";
+    document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("labelBoxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
