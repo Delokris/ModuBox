@@ -36,7 +36,7 @@ function calcPrice() {
     let boxHeight = parseInt(document.getElementById("boxHeight").value);
     // Calculate the price based on the number of inlays and box dimensions
     let boxArea = (boxLength * boxWidth * 1) + (boxLength * boxHeight * 2) + (boxHeight* boxWidth * 2);
-    let price = 10 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 15));
+    let price = 5 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 15));
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
 // document.getElementById("buttonConfigurator").onclick = function() {}
@@ -52,6 +52,8 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
+    calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("boxLength").value = 22;
@@ -65,6 +67,8 @@ document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
+    calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
@@ -72,6 +76,8 @@ document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
+    calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configurator").style["z-index"] = "0";
