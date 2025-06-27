@@ -11,7 +11,7 @@ h1{
 	background-color: #ba8c63;
 }
 #left-container{
-	position: absolute;
+	position: fixed;
 	box-sizing: border-box;
 	background-color: #ba8c63;
 	left: 0%;
@@ -28,7 +28,7 @@ h1{
 }
 
 #left-hotbar{
-	position: absolute;
+	position: fixed;
 	background-color: #ba8c63;
 	left: 0px;
 	top: 108px;
