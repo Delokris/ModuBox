@@ -63,14 +63,22 @@
                     <div id="productConfig">
                         <button id="configuratorCancel" class="close">&times;</button>
                         <h3>Konfiguration</h3>
-                        <p id="productTypeDescription">Wähle den Produkttyp und die Maße aus, um deine Kiste zu konfigurieren. <br> ALLE MAßE SIND AUßENMAßE</p>
+                        <p id="productTypeDescription"><b>Alle Maße sind Außenmaße</b></p>
                         <form id="configForm">
-                        <label for="productType">Produkttyp:</label>
+                        <label for="productInlaySmall">Produktname:</label>
+                        <input type="number" id="productInlaySmall" name="productInlaySmall" value="0">
+                        <br><br>
+                        <label for="productInlayMedium">Produktname:</label>
+                        <input type="number" id="productInlayMedium" name="productInlayMedium" value="0">
+                        <br><br>
+                        <label for="productInlayBig">Produktname:</label>
+                        <input type="number" id="productInlayBig" name="productInlayBig" value="0">
+                        <!-- <label for="productType">Produkttyp:</label>
                         <select id="productType" name="productType">
                             <option value="small">Kleine Kiste</option>
                             <option value="boardgame">Brettspiel-Organizer</option>
                             <option value="individual">Individuelle Maße</option>
-                        </select>  
+                        </select>  -->
                         <br><br>
                         <label for="boxlength" id="labelBoxLength">Länge in cm:</label>
                         <input type="range" id="boxLength" name="length" min="15" max="50" value="30"">

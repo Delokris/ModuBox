@@ -17,6 +17,9 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
+    document.getElementById("boxLength").ariaReadOnly = true;
+    document.getElementById("boxWidth").ariaReadOnly = true;
+    document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
@@ -27,6 +30,9 @@ document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
+    document.getElementById("boxLength").ariaReadOnly = true;
+    document.getElementById("boxWidth").ariaReadOnly = true;
+    document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
