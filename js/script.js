@@ -27,6 +27,19 @@ function calcFittingInlays(){
     document.getElementById("productInlayMedium").max = fittingMedium; 
     document.getElementById("productInlayBig").max = fittingBig; 
 }
+function calcPrice() {
+    let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
+    let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
+    let inlayBig = parseInt(document.getElementById("productInlayBig").value);
+    let boxLength = parseInt(document.getElementById("boxLength").value);
+    let boxWidth = parseInt(document.getElementById("boxWidth").value);
+    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    // Calculate the price based on the number of inlays and box dimensions
+    let boxArea = (boxLength * boxWidth * 1) + (boxLength * boxHeight * 2) + (boxHeight* boxWidth * 2);
+    let price = (inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 15);
+    document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
+}
+// document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("boxLength").value = 30;
     document.getElementById("boxWidth").value = 30;
@@ -77,21 +90,27 @@ document.getElementById("finishedBox").onclick = function() {
 document.getElementById("boxLength").oninput = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
     calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("boxWidth").oninput = function() {
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + this.value + " cm";
     calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("boxHeight").oninput = function() {
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + this.value + " cm";
     calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("productInlaySmall").oninput = function() {
     calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("productInlayMedium").oninput = function() {
     calcFittingInlays();
+    calcPrice();
 }
 document.getElementById("productInlayBig").oninput = function() {
     calcFittingInlays();
+    calcPrice();
 }
