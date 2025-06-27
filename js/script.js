@@ -41,9 +41,9 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonSmall").onclick = function() {
-    document.getElementById("boxLength").value = 20;
-    document.getElementById("boxWidth").value = 15;
-    document.getElementById("boxHeight").value = 10;
+    document.getElementById("boxLength").value = 22;
+    document.getElementById("boxWidth").value = 16;
+    document.getElementById("boxHeight").value = 12;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
