@@ -13,7 +13,7 @@ function calcFittingInlays(){
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
     // let boxHeight = parseInt(document.getElementById("boxHeight").value);
-    let boxArea = boxLength * boxWidth;
+    let boxArea = (UboxLength - 2) * (boxWidth - 2);
     let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
     let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
     let inlayBig = parseInt(document.getElementById("productInlayBig").value);
