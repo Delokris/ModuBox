@@ -44,3 +44,9 @@ document.getElementById("finishedBox").onclick = function() {
 document.getElementById("boxLength").oninput = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
 }
+document.getElementById("boxWidth").oninput = function() {
+    document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + this.value + " cm";
+}
+document.getElementById("boxHeight").oninput = function() {
+    document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + this.value + " cm";
+}
