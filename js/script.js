@@ -12,16 +12,16 @@ function adjustSizeImprint(){
 function calcFittingInlays(){
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
-    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    // let boxHeight = parseInt(document.getElementById("boxHeight").value);
     let boxArea = boxLength * boxWidth;
     let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
     let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
     let inlayBig = parseInt(document.getElementById("productInlayBig").value);
     let inlayArea = (inlaySmall * 16) + (inlayMedium * 32) + (inlayBig * 64);
     // Calculate the number of inlays that fit into the box
-    let fittingSmall = math.Floor(((boxArea - inlayArea) / 16)) + inlaySmall;
-    let fittingMedium = math.Floor(((boxArea - inlayArea) / 32)) + inlayMedium;
-    let fittingBig = math.Floor(((boxArea - inlayArea) / 64)) + inlayBig;
+    let fittingSmall = Math.floor(((boxArea - inlayArea) / 16)) + inlaySmall;
+    let fittingMedium = Math.floor(((boxArea - inlayArea) / 32)) + inlayMedium;
+    let fittingBig = Math.floor(((boxArea - inlayArea) / 64)) + inlayBig;
     
     document.getElementById("productInlaySmall").max = fittingSmall; 
     document.getElementById("productInlayMedium").max = fittingMedium; 
