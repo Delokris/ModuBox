@@ -21,13 +21,19 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonSmall").onclick = function() {
-    document.getElementById("boxLength").value = 15;
+    document.getElementById("boxLength").value = 20;
+    document.getElementById("boxWidth").value = 15;
+    document.getElementById("boxHeight").value = 10;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
+    document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
+    document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
 document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
+    document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
+    document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
 }
