@@ -46,7 +46,7 @@ function calcPrice() {
     let boxHeight = parseInt(document.getElementById("boxHeight").value);
     // Calculate the price based on the number of inlays and box dimensions
     let boxArea = (boxLength * boxWidth * 1) + (boxLength * boxHeight * 2) + (boxHeight* boxWidth * 2);
-    let price = 5 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 15));
+    let price = 5 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 30));
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
 // document.getElementById("buttonConfigurator").onclick = function() {}
