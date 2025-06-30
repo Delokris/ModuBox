@@ -4,6 +4,16 @@ function addToShoppingList(itemID) {
     shoppingList.push(itemID);
     console.log("Item added to shopping list: " + itemID);
     console.log("Current shopping list: " + shoppingList.join(", "));
+    adjustCartSize();
+}
+function adjustCartSize() {
+    let itemCount= document.getElementById("itemCount");
+    itemCount.innerHTML = shoppingList.length;
+    if (shoppingList.length > 0) {
+        itemCount.style.display = "block";
+    } else {
+        itemCount.style.display = "none";
+    }
 }
 function adjustSizeImprint(){
     document.getElementById("left-hotbar").style.height = document.getElementById("container-impressum").getAttribute("height");
