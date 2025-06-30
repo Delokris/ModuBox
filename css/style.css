@@ -201,6 +201,12 @@ nav{
 	padding-bottom: 124px;
 	z-index:2;
 }
+#itemCount{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 .product-item{
 	display: flex;
 	flex-direction: row;
