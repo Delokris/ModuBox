@@ -285,7 +285,7 @@ nav{
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-40%, -40%);
+	transform: translate(-30%, -65%);
 }
 #cart-container img{
 	max-width: 50px;
