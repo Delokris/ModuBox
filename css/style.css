@@ -287,6 +287,14 @@ nav{
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+#cart-container img{
+	max-width: 50px;
+	max-height: 50px;
+	width: auto;
+	height: auto;
+	object-fit: scale-down;
+	vertical-align: middle;
+}
 a{
 	color: white;
 	text-decoration: none;
