@@ -9,11 +9,6 @@ function addToShoppingList(itemID) {
 function adjustCartSize() {
     let itemCount= document.getElementById("itemCount");
     itemCount.innerHTML = shoppingList.length;
-    if (shoppingList.length > 0) {
-        itemCount.style.display = "block";
-    } else {
-        itemCount.style.display = "none";
-    }
 }
 function adjustSizeImprint(){
     document.getElementById("left-hotbar").style.height = document.getElementById("container-impressum").getAttribute("height");
