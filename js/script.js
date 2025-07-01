@@ -61,9 +61,9 @@ function drawPreviewImage(){
     ctx.lineTo(boxLength * 0.01 * canvas.height + 10, 10);
     ctx.lineTo(boxLength * 0.01 * canvas.height + 10, boxWidth * 0.01 * canvas.width + 10);
     ctx.lineTo(10, boxWidth * 0.01 * canvas.width + 10);
-    ctx.closePath();
+    ctx.lineTo(10, 10);
     ctx.stroke();
-    ctx.fill();
+    // ctx.fill();
 }
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
