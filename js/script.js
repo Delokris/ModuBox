@@ -44,6 +44,18 @@ function calcPrice() {
     let price = 5 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 30));
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
+function drawPreviewImage(){
+    const canvas = getElementById("previewImage");
+    const ctx = canvas.getContext("2d");
+    let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
+    let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
+    let inlayBig = parseInt(document.getElementById("productInlayBig").value);
+    let boxLength = parseInt(document.getElementById("boxLength").value);
+    let boxWidth = parseInt(document.getElementById("boxWidth").value);
+    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    
+    ctx.fillRect(12,12,boxLength, boxWidth);
+}
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("boxLength").value = 30;
