@@ -68,7 +68,7 @@ function drawPreviewImage(){
 async function init() {
     let container = document.getElementById("right-container");
     await new Promise(resolve => setTimeout(resolve, 5000));
-    container.style.transform = "translateX(0%)";
+    container.style.opacity = 1;
 }
 init();
 // document.getElementById("buttonConfigurator").onclick = function() {}

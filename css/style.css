@@ -67,7 +67,8 @@ h1{
 	padding: 16px;
 	padding-bottom: 124px;
 	overflow:hidden;
-	transform: translateX(50%);
+	opacity: 0;
+	z-index: 1;
 }
 #center-container{
 	position: absolute;
