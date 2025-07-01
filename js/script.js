@@ -47,12 +47,12 @@ function calcPrice() {
 function drawPreviewImage(){
     const canvas = getElementById("previewImage");
     const ctx = canvas.getContext("2d");
-    let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
-    let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
-    let inlayBig = parseInt(document.getElementById("productInlayBig").value);
+    //let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
+    //let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
+    //let inlayBig = parseInt(document.getElementById("productInlayBig").value);
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
-    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    //let boxHeight = parseInt(document.getElementById("boxHeight").value);
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#f0f0f0";
@@ -65,6 +65,12 @@ function drawPreviewImage(){
     ctx.stroke();
     // ctx.fill();
 }
+async function init() {
+    let container = document.getElementById("right-container");
+    await new Promise(resolve => setTimeout(resolve, 5000));
+    container.style.transform = "translateX(0%)";
+}
+init();
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("boxLength").value = 30;

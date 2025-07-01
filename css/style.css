@@ -63,10 +63,11 @@ h1{
 	width: 15%;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
-	margin-top: 0;	
+	margin-top: 0;
 	padding: 16px;
 	padding-bottom: 124px;
 	overflow:hidden;
+	transform: translateX(50%);
 }
 #center-container{
 	position: absolute;
@@ -76,7 +77,7 @@ h1{
 	top: 108px;
 	min-height: calc(100% - 216px);
 	height: max-content;
-	width: 80%;
+	width: calc(100% - 82px);
 	z-index: 0;
 	overflow-wrap: break-word;
 	box-sizing: border-box;
