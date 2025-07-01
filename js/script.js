@@ -47,21 +47,29 @@ function calcPrice() {
 function drawPreviewImage(){
     const canvas = document.getElementById("previewImage");
     const ctx = canvas.getContext("2d");
-    //let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
-    //let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
-    //let inlayBig = parseInt(document.getElementById("productInlayBig").value);
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
-    //let boxHeight = parseInt(document.getElementById("boxHeight").value);
-    
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#f0f0f0";
+
+    // Calculate scale to fit box within canvas with some padding
+    const padding = 20;
+    const scaleX = (canvas.width - 2 * padding) / boxLength;
+    const scaleY = (canvas.height - 2 * padding) / boxWidth;
+    const scale = Math.min(scaleX, scaleY);
+
+    const rectWidth = boxLength * scale;
+    const rectHeight = boxWidth * scale;
+    const startX = (canvas.width - rectWidth) / 2;
+    const startY = (canvas.height - rectHeight) / 2;
+
     ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(boxLength * 0.02 * canvas.width + 0, 0);
-    ctx.lineTo(boxLength * 0.02 * canvas.width + 0, boxWidth * 0.02 * canvas.width + 0);
-    ctx.lineTo(0, boxWidth * 0.02 * canvas.width + 0);
-    ctx.lineTo(0, 0);
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(startX + rectWidth, startY);
+    ctx.lineTo(startX + rectWidth, startY + rectHeight);
+    ctx.lineTo(startX, startY + rectHeight);
+    ctx.closePath();
     ctx.stroke();
     // ctx.fill();
 }
