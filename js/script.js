@@ -57,11 +57,11 @@ function drawPreviewImage(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#f0f0f0";
     ctx.beginPath();
-    ctx.moveTo(10, 10);
-    ctx.lineTo(boxLength * 0.01 * canvas.width + 10, 10);
-    ctx.lineTo(boxLength * 0.01 * canvas.width + 10, boxWidth * 0.01 * canvas.width + 10);
-    ctx.lineTo(10, boxWidth * 0.01 * canvas.width + 10);
-    ctx.lineTo(10, 10);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(boxLength * 0.02 * canvas.width + 0, 0);
+    ctx.lineTo(boxLength * 0.02 * canvas.width + 0, boxWidth * 0.02 * canvas.width + 0);
+    ctx.lineTo(0, boxWidth * 0.02 * canvas.width + 0);
+    ctx.lineTo(0, 0);
     ctx.stroke();
     // ctx.fill();
 }
