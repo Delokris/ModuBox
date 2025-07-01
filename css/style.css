@@ -300,9 +300,8 @@ nav{
 }
 #previewImage{
 	border: 1px solid #000000;
-	top: 20%;
 	width: 100%;
-	height: 20%;
+	height: auto;
 	object-fit: scale-down;
 }
 a{
