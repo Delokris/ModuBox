@@ -45,7 +45,7 @@ function calcPrice() {
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
 function drawPreviewImage(){
-    const canvas = getElementById("previewImage");
+    const canvas = document.getElementById("previewImage");
     const ctx = canvas.getContext("2d");
     //let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
     //let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
