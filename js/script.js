@@ -7,8 +7,10 @@ function addToShoppingList(itemID) {
     adjustCartSize();
 }
 function adjustCartSize() {
-    let itemCount= document.getElementById("itemCount");
-    itemCount.innerHTML = shoppingList.length;
+    let itemCount = document.getElementById("itemCount");
+    if (itemCount) {
+        itemCount.innerHTML = shoppingList.length;
+    }
 }
 function adjustSizeImprint(){
     document.getElementById("left-hotbar").style.height = document.getElementById("container-impressum").getAttribute("height");
@@ -44,31 +46,123 @@ function calcPrice() {
     let price = 5 * ((inlaySmall * 0.5) + (inlayMedium * 1.0) + (inlayBig * 1.5) + (boxArea * 0.0001 * 30));
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
-function drawPreviewImage(){
+function drawPreviewBox(){
     const canvas = document.getElementById("previewImage");
     const ctx = canvas.getContext("2d");
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
     let boxHeight = parseInt(document.getElementById("boxHeight").value);
-    let scale = canvas.height / parseInt(document.getElementById("boxLength").max);
+    let padding = 20;
+    let scaleY = (canvas.height - padding) / (parseInt(document.getElementById("boxLength").max) + (parseInt(document.getElementById("boxHeight").max) / 2));
+    let scaleX = (canvas.width - padding) / (parseInt(document.getElementById("boxWidth").max) + (parseInt(document.getElementById("boxHeight").max) / 2));
+    let scale = Math.min(scaleX, scaleY);
     let rectWidth = boxWidth * scale;
-    let rectHeight = boxLength * scale;
-    let startX = (canvas.width - rectWidth) / 2;
-    let startY = (canvas.height - rectHeight) / 2;
+    let rectLength = boxLength * scale;
+    let rectHeight = boxHeight * scale * 0.5;
+    let startX = (canvas.width - rectWidth - rectHeight) / 2;
+    let startY = (canvas.height - rectLength - rectHeight) / 2;
+    let Box = new Path2D();
     canvas.height = canvas.clientHeight;
     canvas.width = canvas.clientWidth;
     ctx.strokeStyle = "#000";
     ctx.lineWidth = 5;
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "#FFF";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.moveTo(startX, startY);
-    ctx.lineTo(startX + rectWidth, startY);
-    ctx.lineTo(startX + rectWidth, startY + rectHeight);
-    ctx.lineTo(startX, startY + rectHeight);
-    ctx.closePath();
-    ctx.stroke();
-    // ctx.fill();
+    Box.moveTo(startX + rectWidth, startY);
+    Box.lineTo(startX + rectWidth + rectHeight, startY + rectHeight);
+    Box.lineTo(startX + rectWidth + rectHeight, startY + rectLength + rectHeight);
+    Box.lineTo(startX + rectHeight, startY + rectLength + rectHeight);
+    Box.lineTo(startX, startY + rectLength);
+    Box.moveTo(startX + rectWidth, startY + rectLength);
+    Box.lineTo(startX + rectWidth + rectHeight, startY + rectLength + rectHeight);
+    Box.moveTo(startX + rectHeight, startY + rectLength);
+    ctx.fillStyle = "#905e3e";
+    ctx.fill(Box);
+    ctx.stroke(Box);
+    //ctx.beginPath();
+    Box = new Path2D();
+    Box.moveTo(startX, startY);
+    Box.lineTo(startX + rectWidth, startY);
+    Box.lineTo(startX + rectWidth, startY + rectLength);
+    Box.lineTo(startX, startY + rectLength);
+    Box.closePath();
+    ctx.fillStyle = "#ba8c63";
+    ctx.fill(Box);
+    ctx.stroke(Box);
+    drawPreviewInlays();
+}
+function drawPreviewInlays() {
+    const canvas = document.getElementById("previewImage");
+    const ctx = canvas.getContext("2d");
+    let boxLength = parseInt(document.getElementById("boxLength").value);
+    let boxWidth = parseInt(document.getElementById("boxWidth").value);
+    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    let inlaySmall = parseInt(document.getElementById("productInlaySmall").value);
+    let inlayMedium = parseInt(document.getElementById("productInlayMedium").value);
+    let inlayBig = parseInt(document.getElementById("productInlayBig").value);
+    let inlayNumber = inlaySmall + inlayMedium + inlayBig;
+    let padding = 20;
+    let scaleY = (canvas.height - padding) / (parseInt(document.getElementById("boxLength").max) + (parseInt(document.getElementById("boxHeight").max) / 2));
+    let scaleX = (canvas.width - padding) / (parseInt(document.getElementById("boxWidth").max) + (parseInt(document.getElementById("boxHeight").max) / 2));
+    let scale = Math.min(scaleX, scaleY);
+    let rectWidth = boxWidth * scale;
+    let rectLength = boxLength * scale;
+    let rectHeight = boxHeight * scale * 0.5;
+    let startX = (canvas.width - rectWidth - rectHeight) / 2;
+    let startY = (canvas.height - rectLength - rectHeight) / 2;
+    let inlayX = 0, inlayY = 0;
+    let inlay = new Path2D();
+    let currentInlayWidth, currentInlayLength;
+    //canvas.height = canvas.clientHeight;
+    //canvas.width = canvas.clientWidth;
+    for (let i = 0; i < inlayNumber; i++) {
+        if (i < inlaySmall) {
+            currentInlayWidth = 4 * scale;
+            currentInlayLength = 4 * scale;
+        }
+        else if (i < inlaySmall + inlayMedium) {
+            currentInlayWidth = 8 * scale;
+            currentInlayLength = 4 * scale;
+        } else {
+            currentInlayWidth = 8 * scale;
+            currentInlayLength = 8 * scale;
+        }
+
+        // Rotate inlay if its length is shorter than its width and it would fit better rotated
+        /*let rotated = false;
+        if (
+            currentInlayLength < currentInlayWidth &&
+            inlayX + currentInlayLength <= rectWidth &&
+            currentInlayWidth <= rectLength - inlayY &&
+            inlayX + currentInlayWidth > rectWidth
+        ) {
+            // Swap width and length for rotation
+            [currentInlayWidth, currentInlayLength] = [currentInlayLength, currentInlayWidth];
+            rotated = true;
+        }
+        */
+        // Check if inlay fits in current row, else move to next row
+        if (inlayX + currentInlayWidth > rectWidth) {
+            inlayX = 0;
+            inlayY += currentInlayLength;
+        }
+
+        startX = ((canvas.width - rectWidth - rectHeight) / 2) + inlayX;
+        startY = ((canvas.height - rectLength - rectHeight) / 2) + inlayY;
+
+        inlay = new Path2D();
+        inlay.moveTo(startX, startY);
+        inlay.lineTo(startX + currentInlayWidth, startY);
+        inlay.lineTo(startX + currentInlayWidth, startY + currentInlayLength);
+        inlay.lineTo(startX, startY + currentInlayLength);
+        inlay.closePath();
+        ctx.fillStyle = "#d3b8a0";
+        ctx.fill(inlay);
+        ctx.stroke(inlay);
+
+        // Move inlayX for the next inlay
+        inlayX += currentInlayWidth;
+    }
 }
 async function init() {
     let container = document.getElementById("right-container");
@@ -88,7 +182,7 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("boxLength").value = 22;
@@ -104,7 +198,7 @@ document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
@@ -114,7 +208,7 @@ document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configurator").style["z-index"] = "0";
@@ -134,29 +228,35 @@ document.getElementById("boxLength").oninput = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("boxWidth").oninput = function() {
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("boxHeight").oninput = function() {
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
-    drawPreviewImage();
+    drawPreviewBox();
 }
 document.getElementById("productInlaySmall").oninput = function() {
     calcFittingInlays();
     calcPrice();
+    drawPreviewBox();
 }
 document.getElementById("productInlayMedium").oninput = function() {
     calcFittingInlays();
     calcPrice();
+    drawPreviewBox();
 }
 document.getElementById("productInlayBig").oninput = function() {
     calcFittingInlays();
     calcPrice();
+    drawPreviewBox();
+}
+document.getElementById("productConfig").onresize = function() {
+    drawPreviewBox();
 }
