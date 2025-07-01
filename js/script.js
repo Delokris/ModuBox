@@ -58,8 +58,8 @@ function drawPreviewImage(){
     ctx.fillStyle = "#f0f0f0";
     ctx.beginPath();
     ctx.moveTo(10, 10);
-    ctx.lineTo(boxLength * 0.01 * canvas.height + 10, 10);
-    ctx.lineTo(boxLength * 0.01 * canvas.height + 10, boxWidth * 0.01 * canvas.width + 10);
+    ctx.lineTo(boxLength * 0.01 * canvas.width + 10, 10);
+    ctx.lineTo(boxLength * 0.01 * canvas.width + 10, boxWidth * 0.01 * canvas.width + 10);
     ctx.lineTo(10, boxWidth * 0.01 * canvas.width + 10);
     ctx.lineTo(10, 10);
     ctx.stroke();
