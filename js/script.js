@@ -49,21 +49,18 @@ function drawPreviewImage(){
     const ctx = canvas.getContext("2d");
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#f0f0f0";
-
-    // Calculate scale to fit box within canvas with some padding
-    const padding = 8;
-    const scaleX = (canvas.width - 2 * padding) / boxLength;
-    const scaleY = (canvas.height - 2 * padding) / boxWidth;
-    const scale = Math.min(scaleX, scaleY);
-
-    const rectWidth = boxLength * scale;
-    const rectHeight = boxWidth * scale;
-    const startX = (canvas.width - rectWidth) / 2;
-    const startY = (canvas.height - rectHeight) / 2;
-
+    let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    let scale = canvas.height / parseInt(document.getElementById("boxLength").max);
+    let rectWidth = boxWidth * scale;
+    let rectHeight = boxLength * scale;
+    let startX = (canvas.width - rectWidth) / 2;
+    let startY = (canvas.height - rectHeight) / 2;
+    canvas.height = canvas.clientHeight;
+    canvas.width = canvas.clientWidth;
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 5;
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.moveTo(startX, startY);
     ctx.lineTo(startX + rectWidth, startY);
@@ -87,13 +84,11 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
-    document.getElementById("boxLength").ariaReadOnly = true;
-    document.getElementById("boxWidth").ariaReadOnly = true;
-    document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("boxLength").value = 22;
@@ -109,6 +104,7 @@ document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
@@ -118,6 +114,7 @@ document.getElementById("buttonIndividual").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configurator").style["z-index"] = "0";
