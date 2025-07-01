@@ -301,8 +301,9 @@ nav{
 #previewImage{
 	border: 1px solid #000000;
 	width: 100%;
-	height: auto;
-	object-fit: scale-down;
+	height: 60%;
+	object-fit: contain;
+	box-sizing: border-box;
 }
 a{
 	color: white;
