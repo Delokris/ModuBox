@@ -54,7 +54,7 @@ function drawPreviewImage(){
     ctx.fillStyle = "#f0f0f0";
 
     // Calculate scale to fit box within canvas with some padding
-    const padding = 20;
+    const padding = 8;
     const scaleX = (canvas.width - 2 * padding) / boxLength;
     const scaleY = (canvas.height - 2 * padding) / boxWidth;
     const scale = Math.min(scaleX, scaleY);
