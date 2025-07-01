@@ -54,7 +54,16 @@ function drawPreviewImage(){
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
     let boxHeight = parseInt(document.getElementById("boxHeight").value);
     
-    ctx.fillRect(12,12,boxLength, boxWidth);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#f0f0f0";
+    ctx.beginPath();
+    ctx.moveTo(10, 10);
+    ctx.lineTo(boxLength * 0.01 * canvas.height + 10, 10);
+    ctx.lineTo(boxLength * 0.01 * canvas.height + 10, boxWidth * 0.01 * canvas.width + 10);
+    ctx.lineTo(10, boxWidth * 0.01 * canvas.width + 10);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
 }
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
@@ -114,16 +123,19 @@ document.getElementById("boxLength").oninput = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("boxWidth").oninput = function() {
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("boxHeight").oninput = function() {
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + this.value + " cm";
     calcFittingInlays();
     calcPrice();
+    drawPreviewImage();
 }
 document.getElementById("productInlaySmall").oninput = function() {
     calcFittingInlays();
