@@ -9,7 +9,10 @@ function addToShoppingList(itemID) {
 function adjustCartSize() {
     let itemCount = document.getElementById("itemCount");
     if (itemCount) {
-        itemCount.innerHTML = shoppingList.length;
+        // Find the span or element with the number inside the cart image and replace only the number
+        let html = itemCount.innerHTML;
+        // Replace any number in the innerHTML with the new count
+        itemCount.innerHTML = html.replace(/\d+/, shoppingList.length);
     }
 }
 function adjustSizeImprint(){
@@ -215,12 +218,28 @@ document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
 }
 document.getElementById("finishedBox").onclick = function() {
+    calcPrice();
     boxSize.push([
         document.getElementById("boxLength").value,
         document.getElementById("boxWidth").value,
         document.getElementById("boxHeight").value
     ]);
-    addToShoppingList("Individual");
+    let priceText = document.getElementById("priceDisplay").innerHTML;
+    let price = "";
+    price = priceText.split(': ')[1].split(' €')[0];
+    let item = "";
+    if (parseInt(document.getElementById("boxLength").value) === 30 &&
+        parseInt(document.getElementById("boxWidth").value) === 30 &&
+        parseInt(document.getElementById("boxHeight").value) === 8) {
+        item = "Boardgame-30x30x8-" + price;
+    } else if (parseInt(document.getElementById("boxLength").value) === 22 &&
+        parseInt(document.getElementById("boxWidth").value) === 18 &&
+        parseInt(document.getElementById("boxHeight").value) === 12) {
+        item = "Small-22x16x12-" + price;
+    } else {
+        item = "Individual-" + document.getElementById("boxLength").value + "x" + document.getElementById("boxWidth").value + "x" + document.getElementById("boxHeight").value + "-" + price;
+    }
+    addToShoppingList(item);
     document.getElementById("configurator").style["z-index"] = "0";
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
 }
@@ -260,3 +279,61 @@ document.getElementById("productInlayBig").oninput = function() {
 document.getElementById("productConfig").onresize = function() {
     drawPreviewBox();
 }
+document.getElementById("cart").onclick = function() {
+    let shoppingCart = document.getElementById("shoppingCart");
+    shoppingCart.hidden = !shoppingCart.hidden;
+    if (!shoppingCart.hidden) {
+        let cartItems = document.getElementById("cartItems");
+        cartItems.innerHTML = "";
+        if (shoppingList.length === 0) {
+            cartItems.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
+            document.getElementById("checkoutButton").disabled = true;
+        } else {
+            document.getElementById("checkoutButton").disabled = false;
+            shoppingList.forEach(item => {
+                let itemElement = document.createElement("p");
+                if (item.includes("-")) {
+                    let shoppingItem = item.split("-");
+                    let strong = document.createElement("strong");
+                    strong.textContent = shoppingItem[0];
+                    itemElement.appendChild(strong);
+                    itemElement.appendChild(document.createTextNode(", Größe: " + shoppingItem[1] + ", Preis: " + shoppingItem[2] + " €"));
+                } else {
+                    itemElement.textContent = "" + item + "";
+                }
+                cartItems.appendChild(itemElement);
+            });
+        }
+    }
+}
+
+
+function enableCartItemEditing() {
+    const cartItems = document.getElementById("cartItems");
+    cartItems.querySelectorAll("strong").forEach(strong => {
+        strong.style.cursor = "pointer";
+        strong.onclick = function () {
+            const parentText = strong.parentNode.textContent;
+            // Extract size and price from the text
+            const sizeMatch = parentText.match(/Größe: (\d+)x(\d+)x(\d+)/);
+            if (sizeMatch) {
+                document.getElementById("boxLength").value = sizeMatch[1];
+                document.getElementById("boxWidth").value = sizeMatch[2];
+                document.getElementById("boxHeight").value = sizeMatch[3];
+                document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + sizeMatch[1] + " cm";
+                document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + sizeMatch[2] + " cm";
+                document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + sizeMatch[3] + " cm";
+                document.getElementById("configurator").style["z-index"] = "999";
+                document.getElementById("configuratorOverlay").style["z-index"] = "1000";
+                calcFittingInlays();
+                calcPrice();
+                drawPreviewBox();
+            }
+        };
+    });
+}
+
+// Call this function after updating the cart items
+document.getElementById("cart").addEventListener("click", function () {
+    setTimeout(enableCartItemEditing, 0);
+});

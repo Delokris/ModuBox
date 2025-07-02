@@ -282,7 +282,7 @@ nav{
 	padding: 16px;
 	z-index:2;
 }
-#cart-container{
+#cartImage{
 	position: absolute;
 	right: 16px;
 	top: 50%;
@@ -301,7 +301,21 @@ nav{
 	transform: translateX(-25%);
 	transform: translateY(-60%);
 }
-#cart-container img{
+#shoppingCart{
+	position: fixed;
+	background-color: #ba8c63;
+	right: 0px;
+	top: 108px;
+	min-height: calc(100% - 216px);
+	width: 450px;
+	overflow-wrap: break-word;
+	box-sizing: border-box;
+	margin-top: 0;
+	padding: 16px;
+	padding-bottom: 124px;
+	z-index: 2;
+}
+#cartImage img{
 	max-width: 50px;
 	max-height: 50px;
 	width: auto;
@@ -359,4 +373,23 @@ a{
 	margin-right: 0;
 	white-space: normal;
 	float: right;
+}
+
+#right-container button{
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: 0;
+	white-space: normal;
+	float: right;
+}
+#right-container img{
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: scale-down;
+	vertical-align: middle;
 }
