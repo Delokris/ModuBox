@@ -328,9 +328,11 @@ function enableCartItemEditing() {
                 calcFittingInlays();
                 calcPrice();
                 drawPreviewBox();
+                shoppingCart.hidden = true;
             }
         };
     });
+
 }
 
 // Call this function after updating the cart items
