@@ -323,6 +323,10 @@ a{
 	text-decoration: none;
 	color: black;
 }
+#right-container a{
+	text-decoration: none;
+	color: black;
+}
 #left-container p{
 	font-size: small;
 }
