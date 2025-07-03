@@ -342,6 +342,10 @@ a{
 	text-decoration: none;
 	color: black;
 }
+#container-job a{
+	text-decoration: underline;
+	color: black;
+}
 #left-container p{
 	font-size: small;
 }
