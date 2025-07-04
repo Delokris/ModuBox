@@ -19,6 +19,7 @@ h1{
 /* Hide the images by default */
 .mySlides {
   	display: none;
+	max-height: calc(100% - 216px);
 }
 
 /* Next & previous buttons */
