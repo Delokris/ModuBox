@@ -148,7 +148,7 @@ h1{
 	right: 0px;
 	top: 108px;
 	min-height: calc(100% - 216px);
-	height: max-content;
+	height: calc(100% - 216px);
 	min-width: 164px;
 	width: 15%;
 	max-width: calc(100% - 82px);
