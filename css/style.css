@@ -12,7 +12,6 @@ h1{
 /* Slideshow container */
 .slideshow-container {
 	width: calc(100%-82px);
-  	max-width: 1000px;
   	position: relative;
   	margin: auto;
 }
