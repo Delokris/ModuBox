@@ -19,6 +19,7 @@ h1{
 /* Hide the images by default */
 .mySlides {
   	display: none;
+	object-fit: contain;
 }
 .mySlides img{
 	height: calc(100% - 216px);
@@ -169,7 +170,7 @@ h1{
 	right: 15%;
 	top: 108px;
 	min-height: calc(100% - 216px);
-	height: max-content;
+	height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	z-index: 0;
 	overflow-wrap: break-word;
