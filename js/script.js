@@ -2,12 +2,11 @@ let boxSize = [];
 let shoppingList = [];
 let slideIndex = 1;
 showSlides(slideIndex);
-// Next/previous controls
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -26,8 +25,12 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(function() { plusSlides(1); }, 3000);
 }
+
+// Automatically advance slides every 3 seconds
+setInterval(function() {
+  plusSlides(1);
+}, 3000);
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
     console.log("Item added to shopping list: " + itemID);
