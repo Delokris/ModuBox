@@ -28,9 +28,40 @@ function showSlides(n) {
 }
 
 // Automatically advance slides every 3 seconds
-setInterval(function() {
-  plusSlides(1);
-}, 3000);
+let slideTimer;
+
+function startSlideTimer() {
+    stopSlideTimer();
+    slideTimer = setInterval(function() {
+        plusSlides(1);
+    }, 3000);
+}
+
+function stopSlideTimer() {
+    if (slideTimer) {
+        clearInterval(slideTimer);
+        slideTimer = null;
+    }
+}
+
+// Start timer initially
+startSlideTimer();
+
+// Pause on hover, resume on mouse leave
+const slideshow = document.querySelector('.slideshow-container') || document; // fallback if no container
+slideshow.addEventListener('mouseenter', stopSlideTimer);
+slideshow.addEventListener('mouseleave', startSlideTimer);
+
+// Restart timer on slide change
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    startSlideTimer();
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    startSlideTimer();
+}
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
     console.log("Item added to shopping list: " + itemID);
