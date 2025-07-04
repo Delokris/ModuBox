@@ -13,7 +13,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    n -= 1;
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -27,7 +26,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(plusSlides(1), 3000);
+  setTimeout(function() { plusSlides(1); }, 3000);
 }
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
