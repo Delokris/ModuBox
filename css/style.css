@@ -22,7 +22,7 @@ h1{
 	object-fit: contain;
 }
 .mySlides img{
-	height: 100%;
+	height: calc(100% - 248px);
 	aspect-ratio: 21 / 9;
 	object-fit: contain;
 }
