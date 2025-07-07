@@ -21,6 +21,9 @@ h1{
 /* Hide the images by default */
 .mySlides {
   	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	object-fit: contain;
 }
 .mySlides img{
