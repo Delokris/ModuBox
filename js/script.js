@@ -67,17 +67,22 @@ function currentSlide(n) {
     images[1] = document.getElementById("slideImg2");
     images[2] = document.getElementById("slideImg3");
     images[3] = document.getElementById("slideImg4");
-    
+
 function adjustImgSize() {
     images.forEach(image => {
         if (image) {
             const container = document.getElementById("center-container");
-            if (image.width >= image.height) {
-                image.width = container.clientWidth;
-                image.height = "auto";
+            // Reset styles to natural size before scaling
+            image.style.width = "";
+            image.style.height = "";
+            const imgAspect = image.naturalWidth / image.naturalHeight;
+            const containerAspect = container.clientWidth / container.clientHeight;
+            if (imgAspect >= containerAspect) {
+                image.style.width = container.clientWidth + "px";
+                image.style.height = "auto";
             } else {
-                image.height = container.clientHeight;
-                image.width = "auto";
+                image.style.height = container.clientHeight + "px";
+                image.style.width = "auto";
             }
         }
     });
