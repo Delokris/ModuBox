@@ -62,6 +62,22 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
     startSlideTimer();
 }
+    let images = [];
+    images[0] = document.getElementById("slideImg1");
+    images[1] = document.getElementById("slideImg2");
+    images[2] = document.getElementById("slideImg3");
+    images[3] = document.getElementById("slideImg4");
+    
+function adjustImgSize() {
+    array.forEach(images => {
+        if(images.width >= images.height){
+            images.width = document.getElementById("center-container").width;
+        }
+        else{
+            images.height = document.getElementById("center-container").height;
+        }
+    });
+}
 function addToShoppingList(itemID) {
     shoppingList.push(itemID);
     console.log("Item added to shopping list: " + itemID);

@@ -11,7 +11,7 @@
     <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <div id="page" onresize="adjustSize()">
+    <div id="page" onresize="adjustImgSize()">
         <div id="left-hotbar" class="flexbox">
             <a href="./index.html"> <img id="home_big" alt="home" src="./images/home.png" /></a> <br> <br>
             <a href="./shop.html"> <img id="shop_big" alt="shop" src="./images/shop.png"/></a> <br> <br>
@@ -38,25 +38,25 @@
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 4</div>
-                    <img src="./images/slideImg1.jpg" style="width:100%">
+                    <img id="slideImg1" src="./images/slideImg1.jpg" style="width:100%">
                     <div class="text">Caption Text</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 4</div>
-                    <img src="./images/slideImg2.jpg" style="width:100%">
+                    <img id="slideImg2" src="./images/slideImg2.jpg" style="width:100%">
                     <div class="text">Caption Two</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 4</div>
-                    <img src="./images/slideImg3.jpg" style="width:100%">
+                    <img id="slideImg3" src="./images/slideImg3.jpg" style="width:100%">
                     <div class="text">Caption Three</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">4 / 4</div>
-                    <img src="./images/slideImg4.jpg" style="width:100%">
+                    <img id="slideImg4" src="./images/slideImg4.jpg" style="width:100%">
                     <div class="text">Caption Three</div>
                 </div>
                 <!-- Next and previous buttons -->

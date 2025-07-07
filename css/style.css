@@ -168,9 +168,7 @@ h1{
 	position: absolute;
 	background-color: #e6cfbf;
 	left: 82px;
-	right: 15%;
 	top: 108px;
-	min-height: calc(100% - 216px);
 	height: calc(100% - 216px);
 	width: calc(100% - 82px);
 	z-index: 0;
@@ -179,8 +177,6 @@ h1{
 	object-fit: contain;
 	overflow: hidden;
 	margin-top: 0;
-	padding: 16px;
-	padding-bottom: 124px;
 }
 #header{
 	position: fixed;
