@@ -34,7 +34,7 @@ function startSlideTimer() {
     stopSlideTimer();
     slideTimer = setInterval(function() {
         plusSlides(1);
-    }, 3000);
+    }, 7000);
 }
 
 function stopSlideTimer() {
