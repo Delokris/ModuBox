@@ -69,12 +69,16 @@ function currentSlide(n) {
     images[3] = document.getElementById("slideImg4");
     
 function adjustImgSize() {
-    array.forEach(images => {
-        if(images.width >= images.height){
-            images.width = document.getElementById("center-container").width;
-        }
-        else{
-            images.height = document.getElementById("center-container").height;
+    images.forEach(image => {
+        if (image) {
+            const container = document.getElementById("center-container");
+            if (image.width >= image.height) {
+                image.width = container.clientWidth;
+                image.height = "auto";
+            } else {
+                image.height = container.clientHeight;
+                image.width = "auto";
+            }
         }
     });
 }
