@@ -376,7 +376,7 @@ document.getElementById("productInlayBig").oninput = function() {
 document.getElementById("productConfig").onresize = function() {
     drawPreviewBox();
 }
-document.getElementById("cartImage").onclick = function() {
+document.getElementById("cart").onclick = function() {
     let shoppingCart = document.getElementById("shoppingCart");
     shoppingCart.hidden = !shoppingCart.hidden;
     if (!shoppingCart.hidden) {
