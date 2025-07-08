@@ -262,8 +262,8 @@ async function init() {
 init();
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
+//    document.getElementById("configurator").hidden = false;
+//    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 30;
     document.getElementById("boxWidth").value = 30;
     document.getElementById("boxHeight").value = 8;
@@ -277,8 +277,8 @@ document.getElementById("buttonBoardgame").onclick = function() {
     drawPreviewBox();
 }
 document.getElementById("buttonSmall").onclick = function() {
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
+//    document.getElementById("configurator").hidden = false;
+//    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 22;
     document.getElementById("boxWidth").value = 16;
     document.getElementById("boxHeight").value = 12;
@@ -295,8 +295,8 @@ document.getElementById("buttonSmall").onclick = function() {
     drawPreviewBox();
 }
 document.getElementById("buttonIndividual").onclick = function() {
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
+//    document.getElementById("configurator").hidden = false;
+//    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
@@ -309,8 +309,8 @@ document.getElementById("buttonIndividual").onclick = function() {
 document.getElementById("configuratorCancel").onclick = function() {
     document.getElementById("configurator").style["z-index"] = "0";
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
-    document.getElementById("configurator").hidden = true;
-    document.getElementById("configuratorOverlay").hidden = true;
+//    document.getElementById("configurator").hidden = true;
+//    document.getElementById("configuratorOverlay").hidden = true;
 }
 document.getElementById("finishedBox").onclick = function() {
     calcPrice();
@@ -337,8 +337,8 @@ document.getElementById("finishedBox").onclick = function() {
     addToShoppingList(item);
     document.getElementById("configurator").style["z-index"] = "0";
     document.getElementById("configuratorOverlay").style["z-index"] = "0";
-    document.getElementById("configurator").hidden = true;
-    document.getElementById("configuratorOverlay").hidden = true;
+//    document.getElementById("configurator").hidden = true;
+//    document.getElementById("configuratorOverlay").hidden = true;
 }
 document.getElementById("boxLength").oninput = function() {
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + this.value + " cm";
