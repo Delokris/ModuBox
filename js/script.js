@@ -256,8 +256,10 @@ function drawPreviewInlays() {
 }
 async function init() {
     let container = document.getElementById("right-container");
-    await new Promise(resolve => setTimeout(resolve, 5000));
-    container.hidden = false;
+    if(container){
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        container.hidden = false;
+    }
 }
 init();
 // document.getElementById("buttonConfigurator").onclick = function() {}
