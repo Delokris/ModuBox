@@ -254,14 +254,6 @@ function drawPreviewInlays() {
         inlayX += currentInlayWidth;
     }
 }
-async function init() {
-    let container = document.getElementById("right-container");
-    if(container){
-        await new Promise(resolve => setTimeout(resolve, 5000));
-        container.hidden = false;
-    }
-}
-init();
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
 //    document.getElementById("configurator").hidden = false;
@@ -438,3 +430,11 @@ function enableCartItemEditing() {
 document.getElementById("cart").addEventListener("click", function () {
     setTimeout(enableCartItemEditing, 0);
 });
+async function init() {
+    let container = document.getElementById("right-container");
+    if(container){
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        container.hidden = false;
+    }
+}
+init();
