@@ -262,6 +262,8 @@ async function init() {
 init();
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
+    document.getElementById("configurator").hidden = false;
+    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 30;
     document.getElementById("boxWidth").value = 30;
     document.getElementById("boxHeight").value = 8;
@@ -270,13 +272,13 @@ document.getElementById("buttonBoardgame").onclick = function() {
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
     calcFittingInlays();
     calcPrice();
     drawPreviewBox();
 }
 document.getElementById("buttonSmall").onclick = function() {
+    document.getElementById("configurator").hidden = false;
+    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 22;
     document.getElementById("boxWidth").value = 16;
     document.getElementById("boxHeight").value = 12;
@@ -288,20 +290,18 @@ document.getElementById("buttonSmall").onclick = function() {
     document.getElementById("boxHeight").ariaReadOnly = true;
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
     calcFittingInlays();
     calcPrice();
     drawPreviewBox();
 }
 document.getElementById("buttonIndividual").onclick = function() {
+    document.getElementById("configurator").hidden = false;
+    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
     document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + document.getElementById("boxHeight").value + " cm";
     document.getElementById("configurator").style["z-index"] = "999";
     document.getElementById("configuratorOverlay").style["z-index"] = "1000";
-    document.getElementById("configurator").hidden = false;
-    document.getElementById("configuratorOverlay").hidden = false;
     calcFittingInlays();
     calcPrice();
     drawPreviewBox();
@@ -376,7 +376,7 @@ document.getElementById("productInlayBig").oninput = function() {
 document.getElementById("productConfig").onresize = function() {
     drawPreviewBox();
 }
-document.getElementById("cart").onclick = function() {
+document.getElementById("cartImage").onclick = function() {
     let shoppingCart = document.getElementById("shoppingCart");
     shoppingCart.hidden = !shoppingCart.hidden;
     if (!shoppingCart.hidden) {
