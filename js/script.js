@@ -2,15 +2,6 @@ let boxSize = [];
 let shoppingList = [];
 let slideIndex = 1;
 showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -23,18 +14,24 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  if (slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";
+  }
+  if (dots[slideIndex-1]) {
+    dots[slideIndex-1].className += " active";
+  }
 }
 
 // Automatically advance slides every 3 seconds
 let slideTimer;
 
 function startSlideTimer() {
-    stopSlideTimer();
-    slideTimer = setInterval(function() {
-        plusSlides(1);
-    }, 7000);
+    if(document.getElementById("center-container")){
+        stopSlideTimer();
+        slideTimer = setInterval(function() {
+            plusSlides(1);
+        }, 7000);
+    }
 }
 
 function stopSlideTimer() {
@@ -43,15 +40,6 @@ function stopSlideTimer() {
         slideTimer = null;
     }
 }
-
-// Start timer initially
-startSlideTimer();
-
-// Pause on hover, resume on mouse leave
-const slideshow = document.querySelector('.slideshow-container') || document; // fallback if no container
-slideshow.addEventListener('mouseenter', stopSlideTimer);
-slideshow.addEventListener('mouseleave', startSlideTimer);
-
 // Restart timer on slide change
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -256,8 +244,8 @@ function drawPreviewInlays() {
 }
 // document.getElementById("buttonConfigurator").onclick = function() {}
 document.getElementById("buttonBoardgame").onclick = function() {
-//    document.getElementById("configurator").hidden = false;
-//    document.getElementById("configuratorOverlay").hidden = false;
+    document.getElementById("configurator").hidden = false;
+    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 30;
     document.getElementById("boxWidth").value = 30;
     document.getElementById("boxHeight").value = 8;
@@ -271,10 +259,10 @@ document.getElementById("buttonBoardgame").onclick = function() {
     drawPreviewBox();
 }
 document.getElementById("buttonSmall").onclick = function() {
-//    document.getElementById("configurator").hidden = false;
-//    document.getElementById("configuratorOverlay").hidden = false;
+    document.getElementById("configurator").hidden = false;
+    document.getElementById("configuratorOverlay").hidden = false;
     document.getElementById("boxLength").value = 22;
-    document.getElementById("boxWidth").value = 16;
+    document.getElementById("boxWidth").value = 18;
     document.getElementById("boxHeight").value = 12;
     document.getElementById("labelBoxLength").innerHTML = "Länge:<br>" + document.getElementById("boxLength").value + " cm";
     document.getElementById("labelBoxWidth").innerHTML = "Breite:<br>" + document.getElementById("boxWidth").value + " cm";
@@ -416,9 +404,12 @@ function enableCartItemEditing() {
                 document.getElementById("labelBoxHeight").innerHTML = "Höhe:<br>" + sizeMatch[3] + " cm";
                 document.getElementById("configurator").style["z-index"] = "999";
                 document.getElementById("configuratorOverlay").style["z-index"] = "1000";
+                document.getElementById("configurator").hidden = false;
+                document.getElementById("configuratorOverlay").hidden = false;
                 calcFittingInlays();
                 calcPrice();
                 drawPreviewBox();
+                const shoppingCart = document.getElementById("shoppingCart");
                 shoppingCart.hidden = true;
             }
         };
@@ -431,10 +422,23 @@ document.getElementById("cart").addEventListener("click", function () {
     setTimeout(enableCartItemEditing, 0);
 });
 async function init() {
+    adjustImgSize();
+    startSlideTimer();
     let container = document.getElementById("right-container");
     if(container){
         await new Promise(resolve => setTimeout(resolve, 5000));
         container.hidden = false;
     }
 }
-init();
+
+// Start timer and event listeners after DOM is loaded
+//document.addEventListener('DOMContentLoaded', function() {
+//    startSlideTimer();
+
+    // Pause on hover, resume on mouse leave
+    const slideshow = document.querySelector('.slideshow-container') || document; // fallback if no container
+    slideshow.addEventListener('mouseenter', stopSlideTimer);
+    slideshow.addEventListener('mouseleave', startSlideTimer);
+
+//    init();
+//});
