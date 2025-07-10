@@ -361,6 +361,9 @@ document.getElementById("productInlayBig").oninput = function() {
     calcPrice();
     drawPreviewBox();
 }
+document.getElementById("productInlaySurface").oninput = function() {
+    calcPrice();
+}
 document.getElementById("productConfig").onresize = function() {
     drawPreviewBox();
 }
