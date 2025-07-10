@@ -119,9 +119,15 @@ function calcPrice() {
     let boxLength = parseInt(document.getElementById("boxLength").value);
     let boxWidth = parseInt(document.getElementById("boxWidth").value);
     let boxHeight = parseInt(document.getElementById("boxHeight").value);
+    let inlaySurface = document.getElementById("productInlaySurface").value;
+    let surfacePrice = 1;
     // Calculate the price based on the number of inlays and box dimensions
+    if(inlaySurface == wood){
+        surfacePrice = 1.3;
+    }
+
     let boxArea = (boxLength * boxWidth * 1) + (boxLength * boxHeight * 2) + (boxHeight* boxWidth * 2);
-    let price = ((inlaySmall * 1.5) + (inlayMedium * 3) + (inlayBig * 6) + (boxArea * 0.0001 * 30 * 10));
+    let price = ((inlaySmall * 1.5 * surfacePrice) + (inlayMedium * 3 * surfacePrice) + (inlayBig * 6 * surfacePrice) + (boxArea * 0.0001 * 30 * 10));
     document.getElementById("priceDisplay").innerHTML = "Gesamtpreis: " + price.toFixed(2) + " €";
 }
 function drawPreviewBox(){
