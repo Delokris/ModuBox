@@ -122,7 +122,7 @@ function calcPrice() {
     let inlaySurface = document.getElementById("productInlaySurface").value;
     let surfacePrice = 1;
     // Calculate the price based on the number of inlays and box dimensions
-    if(inlaySurface == wood){
+    if(inlaySurface == "fleece"){
         surfacePrice = 1.3;
     }
 
